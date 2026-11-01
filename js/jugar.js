@@ -151,17 +151,17 @@ function encabezado(texto) {
 function figura(imagen) {
   const marco = document.createElement("figure");
   const img = document.createElement("img");
-  img.src = imagen && typeof imagen.src === "string" ? imagen.src : respaldoImagen;
+  const src = imagen && typeof imagen.src === "string" ? imagen.src : respaldoImagen;
   img.alt = imagen && typeof imagen.alt === "string" && imagen.alt.trim() ? imagen.alt : "Imagen de prueba";
   img.width = 800;
   img.height = 500;
-  img.decoding = "async";
   img.addEventListener("error", () => {
     if (img.dataset.respaldo === "1") return;
     img.dataset.respaldo = "1";
     img.src = respaldoImagen;
   });
   marco.append(img);
+  img.src = src;
   return marco;
 }
 

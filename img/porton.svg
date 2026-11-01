@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
   <rect width="800" height="500" fill="#f4efe4"/>
   <rect y="248" width="800" height="252" fill="#e4d2b6"/>
   
