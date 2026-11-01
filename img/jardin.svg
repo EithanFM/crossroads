@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
+  <rect width="800" height="500" fill="#f4efe4"/>
+  <rect y="248" width="800" height="252" fill="#e4d2b6"/>
+  
+    <path d="M250 400 V230 A150 150 0 0 1 550 230 V400" fill="none" stroke="#2c4a3a" stroke-width="26"/>
+    <circle cx="196" cy="372" r="48" fill="#3e6b52"/>
+    <circle cx="604" cy="380" r="42" fill="#2f5a44"/>
+    <rect x="372" y="300" width="56" height="118" fill="#d2b48c"/>
+    <circle cx="400" cy="168" r="22" fill="#e0a04a"/>
+  
+  <rect x="0" y="418" width="800" height="82" fill="#9d3424"/>
+  <text x="400" y="462" text-anchor="middle" font-family="Liberation Serif, Georgia, serif" font-size="40" fill="#fffaf3">Imagen de prueba</text>
+  <rect x="16" y="16" width="768" height="468" fill="none" stroke="#1c1612" stroke-width="4"/>
+</svg>

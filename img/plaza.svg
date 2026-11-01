@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid meet">
+  <rect width="800" height="500" fill="#f4efe4"/>
+  <rect y="248" width="800" height="252" fill="#e4d2b6"/>
+  
+    <rect x="355" y="150" width="90" height="268" fill="#d2b48c"/>
+    <rect x="120" y="268" width="560" height="78" fill="#d2b48c"/>
+    <circle cx="400" cy="307" r="16" fill="#9d3424"/>
+    <rect x="168" y="214" width="92" height="14" rx="3" fill="#2c4a3a"/>
+    <rect x="184" y="228" width="10" height="28" fill="#1c1612"/>
+    <rect x="234" y="228" width="10" height="28" fill="#1c1612"/>
+  
+  <rect x="0" y="418" width="800" height="82" fill="#9d3424"/>
+  <text x="400" y="462" text-anchor="middle" font-family="Liberation Serif, Georgia, serif" font-size="40" fill="#fffaf3">Imagen de prueba</text>
+  <rect x="16" y="16" width="768" height="468" fill="none" stroke="#1c1612" stroke-width="4"/>
+</svg>

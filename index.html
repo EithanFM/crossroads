@@ -1,5 +1,35 @@
 <!doctype html>
 <html lang="es">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Crossroads (preview)</title></head>
-<body><h1>Crossroads</h1><p>Preview de prueba. En construcción.</p></body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crossroads — historias interactivas</title>
+  <meta name="description" content="Crossroads es un sitio de historias interactivas en español. Eliges el rumbo y lo que decides acompaña el resto del camino.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f3ecdf">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+  <main class="pagina">
+    <header class="porta">
+      <p class="marca">
+        <svg class="senal" width="18" height="18" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M16 4v10M16 14 7 27M16 14l9 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Historias interactivas
+      </p>
+      <h1>Crossroads</h1>
+      <p class="entradilla">Elige el camino. Lo que hiciste sigue contigo, y algunas ramas salen al azar.</p>
+    </header>
+    <section class="catalogo" aria-labelledby="historias-titulo">
+      <h2 id="historias-titulo" class="seccion-titulo">Historias</h2>
+      <div id="lista" class="lista">
+        <p>Cargando historias…</p>
+      </div>
+      <noscript><p class="aviso">Activa JavaScript para ver las historias.</p></noscript>
+    </section>
+  </main>
+  <script type="module" src="/js/inicio.js"></script>
+</body>
 </html>
