@@ -26,4 +26,4 @@ La portada lee el índice y muestra `titulo`, `resumen` y `etiqueta`. La histori
 
 Cada camino tiene que poder llegar a un final. Conviene dejar, en cada escena que no es final, una opción sin `si`.
 
-`historia-de-prueba` es solo un ensayo para probar el lector. No es un relato de Crossroads.
+`historia-de-prueba` es el borrador de prueba del inicio de Crossroads: la víspera de la Academia, en Vesperia. El archivo sigue sirviendo para probar el lector de principio a fin.

@@ -1,76 +1,98 @@
 {
   "id": "historia-de-prueba",
-  "titulo": "Historia de prueba",
-  "resumen": "Caminata corta para probar el lector de principio a fin. No pertenece al mundo de Crossroads.",
-  "etiqueta": "Contenido de prueba",
+  "titulo": "La víspera (borrador de prueba)",
+  "resumen": "Borrador de prueba del inicio de Crossroads. Un día antes de la Academia, en Vesperia, puedes seguir a la princesa de ojos ámbar o ayudar a un muchacho en apuros.",
+  "etiqueta": "Borrador de prueba",
   "inicio": "inicio",
   "escenas": {
     "inicio": {
       "imagen": "plaza",
       "alt": "Imagen de prueba: una plaza con dos caminos",
-      "texto": "Esto es una historia de prueba, no un relato de Crossroads. Estás en una plaza dibujada para el ensayo. A un lado hay un banco. Al frente, la calle sigue.",
+      "texto": "Mañana entras a la Academia de Vesperia. Hoy es la víspera, y todavía estás fuera: una plaza de la capital, polvo de las llanuras de Asgard en las botas y la torre cerrada al fondo. Eres un muchacho del común, de dieciséis años. La puerta no se abre hasta el día que viene.\n\nEl viento es tu magia, la única que tendrás en la vida, y ya la usas como una herramienta. Apartas el polvo, frenas una carreta, empujas un fardo. No derriba un muro ni te levanta del suelo: ese es su tamaño, y te basta. Un soplo casi no gasta maná. Un golpe firme cansa como una carrera corta, y el maná vuelve con el descanso. Solo si lo vacías entero te duermes, y despiertas tres o cinco días después. Mañana tienes que estar en la puerta, así que mides el golpe, como has hecho siempre.\n\nEn la plaza hay dos caminos.\n\nUn carruaje cerrado cruza despacio. En la ventanilla, una muchacha de tu edad asoma unos ojos de color ámbar. Alguien, a tu lado, murmura que es la princesa.\n\nAl otro extremo, junto a un portón bajo, dos hombres acorralan a un muchacho delgado, de pelo oscuro y manga rota. Lo empujan contra la madera. Él planta los pies y no logra soltarse. Nadie se mete.",
       "opciones": [
-        { "texto": "Ir al banco", "siguiente": "banco" },
-        { "texto": "Seguir por la calle", "siguiente": "calle" }
+        { "texto": "Seguir el carruaje de la princesa de ojos ámbar", "siguiente": "carruaje" },
+        { "texto": "Ayudar al muchacho al que empujan", "siguiente": "apuros" }
       ]
     },
-    "banco": {
-      "imagen": "banco",
-      "alt": "Imagen de prueba: un banco con una llave de cartón",
-      "texto": "Sobre el banco hay una llave de cartón. Lleva escrita la palabra «prueba». Si te la llevas, más adelante podrás usarla.",
-      "opciones": [
-        { "texto": "Llevarse la llave", "siguiente": "calle", "fijar": { "tieneLlave": true } },
-        { "texto": "Dejar la llave", "siguiente": "calle" }
-      ]
-    },
-    "calle": {
+    "carruaje": {
       "imagen": "calle",
       "alt": "Imagen de prueba: una calle que se divide",
-      "texto": "La calle se abre en una esquina. Si doblas, el siguiente lugar se sortea: el jardín sale con más frecuencia que el portón. El arco, en cambio, lleva siempre al jardín.",
+      "texto": "Sigues el carruaje por una calle ancha de Vesperia. La muchacha de ojos ámbar se asoma un instante: el color es claro, como resina al sol. El polvo de la llanura se levanta y a ratos te esconde las ruedas.\n\nPuedes apartarlo con un soplo, de los que usas sin pensarlo en el trabajo. También puedes meterte por un callejón para atajar. Por ahí se sale más veces al jardín adonde va el carruaje, y alguna vez al portón donde empujaban al muchacho.",
       "opciones": [
+        { "texto": "Apartar el polvo con un soplo de viento", "siguiente": "lirien" },
         {
-          "texto": "Doblar en la esquina",
+          "texto": "Atajar por el callejón",
           "siguiente": [
-            { "id": "jardin", "peso": 3 },
-            { "id": "porton", "peso": 1 }
+            { "id": "lirien", "peso": 3 },
+            { "id": "apuros", "peso": 1 }
           ]
-        },
-        { "texto": "Cruzar el arco", "siguiente": "jardin" }
+        }
       ]
     },
-    "jardin": {
-      "imagen": "jardin",
-      "alt": "Imagen de prueba: un jardín con un arco",
-      "texto": "Llegaste al jardín de prueba. Un arco de madera cierra el sendero.",
-      "opciones": [
-        { "texto": "Pasar bajo el arco", "siguiente": "final-sendero" }
-      ]
-    },
-    "porton": {
+    "apuros": {
       "imagen": "porton",
       "alt": "Imagen de prueba: un portón cerrado",
-      "texto": "Un portón de prueba cierra el paso. La cerradura está pintada sobre la madera. Con la llave de cartón se puede abrir. Si no la traes, solo queda rodear el muro.",
+      "texto": "El portón bajo cierra un callejón de la plaza. Los dos hombres tienen al muchacho delgado contra la madera: pelo oscuro, manga rota, un morado nuevo en el pómulo. Uno le registra el bolsillo y no saca nada. El otro dice que igual se lo lleva.\n\nÉl te ve. No grita. Afianza los pies para que no lo arrastren.\n\nTu viento basta para separar a una persona de otra. Un golpe medido los hace trastabillar: es un uso de los de siempre. Con ese golpe basta. Vaciar el maná sería quedarte dormido varios días, y hoy no llegas a vaciarlo.",
       "opciones": [
-        { "texto": "Usar la llave", "siguiente": "final-llave", "si": { "tieneLlave": true } },
-        { "texto": "Rodear el portón", "siguiente": "final-muro" }
+        { "texto": "Separarlos con un golpe de viento", "siguiente": "encuentro", "fijar": { "fuisteAAyudar": true } },
+        { "texto": "Ponerte delante y exigir que lo suelten", "siguiente": "encuentro", "fijar": { "fuisteAAyudar": true } }
       ]
     },
-    "final-sendero": {
+    "lirien": {
+      "imagen": "jardin",
+      "alt": "Imagen de prueba: un jardín con un arco",
+      "texto": "El carruaje se detiene ante un jardín de muros bajos. La Academia queda más allá, y sigue cerrada. La muchacha baja sin prisa. De cerca, los ojos ámbar no se parecen a ningún otro. Habla primero.\n\n—Soy Lirien. Mi padre es el rey. Mañana esta ciudad se llena de estudiantes, y tú aún llevas el polvo del camino: se nota que la puerta es mañana, no hoy.\n\nEn Asgard cada persona tiene un solo tipo de magia para toda la vida. El tuyo ya está elegido. Puedes decirle que es viento: firme, del tamaño del trabajo, ni una tormenta ni un soplo vacío.",
+      "opciones": [
+        { "texto": "Decirle que tu magia es el viento y que mañana entras", "siguiente": "umbral", "fijar": { "leHablaste": true }, "si": { "fuisteAAyudar": false } },
+        { "texto": "Preguntarle por qué recorre la ciudad un día antes", "siguiente": "umbral", "fijar": { "leHablaste": true }, "si": { "fuisteAAyudar": false } },
+        { "texto": "Ir a ayudar al muchacho de la manga rota", "siguiente": "apuros", "fijar": { "leHablaste": true }, "si": { "fuisteAAyudar": false } },
+        { "texto": "Decirle a Lirien que Sylas ya está a salvo, y despedirte", "siguiente": "final-cruce", "fijar": { "leHablaste": true }, "si": { "fuisteAAyudar": true } }
+      ]
+    },
+    "umbral": {
+      "imagen": "porton",
+      "alt": "Imagen de prueba: un portón cerrado",
+      "texto": "Lirien camina contigo hasta un portón lateral del jardín. Desde el vano se ve la calle y, lejos, la torre de la Academia.\n\n—Quería recorrer Vesperia antes de que las plazas se llenen —dice—. Ojos ámbar o no, yo también tengo dieciséis años.\n\nCalla un momento. Cuando llegaste a la plaza, dos hombres empujaban a un muchacho de manga rota contra un portón. Ella no da una orden. Lo que hagas con el resto de la víspera es tuyo.",
+      "opciones": [
+        { "texto": "Volver a la calle y ayudar al muchacho", "siguiente": "apuros", "si": { "fuisteAAyudar": false } },
+        { "texto": "Despedirte de Lirien e ir a descansar", "siguiente": "final-lirien", "si": { "fuisteAAyudar": false } }
+      ]
+    },
+    "encuentro": {
+      "imagen": "calle",
+      "alt": "Imagen de prueba: una calle que se divide",
+      "texto": "Los hombres sueltan al muchacho y se van calle abajo. El empujón del viento, si lo usaste, fue de trabajo: los separa y no los derriba. Si te plantaste delante, no hizo falta más. El maná sigue contigo.\n\nÉl se frota la muñeca. Tiene tu edad, el morado en el pómulo y la mirada despierta.\n\n—Sylas —dice, y es lo primero que entrega—. No robé nada. Gracias. Si mañana entras a la Academia, no hace falta que andes repitiendo mi nombre.",
+      "opciones": [
+        { "texto": "Acompañar a Sylas hasta que recupere el aire", "siguiente": "refugio" },
+        { "texto": "Preguntarle a Sylas si alguien lo espera", "siguiente": "refugio" }
+      ]
+    },
+    "refugio": {
+      "imagen": "banco",
+      "alt": "Imagen de prueba: un banco con una llave de cartón",
+      "texto": "Sylas camina contigo hasta un banco, lejos del portón. Se sienta, respira, y por un rato mira el suelo y no la calle.\n\n—No tengo con qué devolverte el favor —dice—. Mi magia es de otro tipo, y hoy no hacía falta usarla. Tú mañana entras a la Academia. Yo solo necesitaba que alguien se metiera.\n\nSi gastaste un golpe, el maná ya está volviendo. No lo vaciaste. Con dormir esta noche queda como siempre: listo, del mismo tamaño.",
+      "opciones": [
+        { "texto": "Dejar a Sylas a salvo e ir hacia la muchacha de ojos ámbar", "siguiente": "lirien", "si": { "leHablaste": false } },
+        { "texto": "Contarle a Sylas que hablaste con Lirien", "siguiente": "final-cruce", "si": { "leHablaste": true } },
+        { "texto": "Despedirte de Sylas e ir a dormir", "siguiente": "final-sylas" }
+      ]
+    },
+    "final-lirien": {
       "imagen": "final-sendero",
       "alt": "Imagen de prueba: el arco al final del sendero",
-      "texto": "Cruzaste el arco del jardín. Aquí se acaba este camino de prueba.",
+      "texto": "Te despides de Lirien en el portón del jardín. Ella sube al carruaje y, antes de cerrar la ventanilla, te busca con los ojos ámbar.\n\n—Mañana la Academia estará llena —dice—. Hoy la calle todavía era la calle. Gracias por hablar claro.\n\nEl carruaje se aleja. En la plaza, el muchacho del portón queda atrás, sin ti. Tú buscas una cama sencilla en Vesperia, cenas y dejas el maná quieto hasta el amanecer. El viento sigue contigo, listo, del mismo tamaño. Mañana cruzas la puerta. Esta noche, no.",
       "final": true
     },
-    "final-llave": {
+    "final-sylas": {
       "imagen": "final-llave",
       "alt": "Imagen de prueba: un portón abierto",
-      "texto": "La llave de cartón abrió el portón. Este desenlace solo aparece si te la llevaste.",
+      "texto": "Sylas se levanta del banco. El morado sigue en el pómulo; las manos que lo sujetaban, no.\n\n—Si nos cruzamos en Vesperia, me saludas —dice—. Si no, también está bien. Y gracias otra vez.\n\nSe mezcla con la gente de la capital. Tú buscas dónde dormir. El maná, si bajó, sube con la noche; si no lo tocaste, sigue entero. De las dos maneras, mañana el viento responde como siempre. Sylas va libre por la ciudad, y tú entras a la Academia con el día, no antes.",
       "final": true
     },
-    "final-muro": {
+    "final-cruce": {
       "imagen": "final-muro",
       "alt": "Imagen de prueba: un muro que cierra el camino",
-      "texto": "Rodeaste el portón y el camino termina contra un muro. Aquí acaba la prueba.",
+      "texto": "La tarde cae sobre Vesperia. Los muros de la Academia siguen cerrados. Falta un día para cruzarlos.\n\nLirien sabe tu cara: la princesa de ojos ámbar te habló en la calle, como habla alguien de dieciséis años que todavía puede andar por la ciudad. Sylas va libre. El morado del pómulo se le pasará; las manos que lo sujetaban no vuelven.\n\nCenas algo caliente, dejas que el maná vuelva del todo y duermes fuera de la torre. El viento no creció ni se apagó: mañana responde igual que hoy. La Academia es mañana. Esta víspera se acaba aquí.",
       "final": true
     }
   }
