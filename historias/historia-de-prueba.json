@@ -1,0 +1,77 @@
+{
+  "id": "historia-de-prueba",
+  "titulo": "Historia de prueba",
+  "resumen": "Caminata corta para probar el lector de principio a fin. No pertenece al mundo de Crossroads.",
+  "etiqueta": "Contenido de prueba",
+  "inicio": "inicio",
+  "escenas": {
+    "inicio": {
+      "imagen": "plaza",
+      "alt": "Imagen de prueba: una plaza con dos caminos",
+      "texto": "Esto es una historia de prueba, no un relato de Crossroads. Estás en una plaza dibujada para el ensayo. A un lado hay un banco. Al frente, la calle sigue.",
+      "opciones": [
+        { "texto": "Ir al banco", "siguiente": "banco" },
+        { "texto": "Seguir por la calle", "siguiente": "calle" }
+      ]
+    },
+    "banco": {
+      "imagen": "banco",
+      "alt": "Imagen de prueba: un banco con una llave de cartón",
+      "texto": "Sobre el banco hay una llave de cartón. Lleva escrita la palabra «prueba». Si te la llevas, más adelante podrás usarla.",
+      "opciones": [
+        { "texto": "Llevarse la llave", "siguiente": "calle", "fijar": { "tieneLlave": true } },
+        { "texto": "Dejar la llave", "siguiente": "calle" }
+      ]
+    },
+    "calle": {
+      "imagen": "calle",
+      "alt": "Imagen de prueba: una calle que se divide",
+      "texto": "La calle se abre en una esquina. Si doblas, el siguiente lugar se sortea: el jardín sale con más frecuencia que el portón. El arco, en cambio, lleva siempre al jardín.",
+      "opciones": [
+        {
+          "texto": "Doblar en la esquina",
+          "siguiente": [
+            { "id": "jardin", "peso": 3 },
+            { "id": "porton", "peso": 1 }
+          ]
+        },
+        { "texto": "Cruzar el arco", "siguiente": "jardin" }
+      ]
+    },
+    "jardin": {
+      "imagen": "jardin",
+      "alt": "Imagen de prueba: un jardín con un arco",
+      "texto": "Llegaste al jardín de prueba. Un arco de madera cierra el sendero.",
+      "opciones": [
+        { "texto": "Pasar bajo el arco", "siguiente": "final-sendero" }
+      ]
+    },
+    "porton": {
+      "imagen": "porton",
+      "alt": "Imagen de prueba: un portón cerrado",
+      "texto": "Un portón de prueba cierra el paso. La cerradura está pintada sobre la madera. Con la llave de cartón se puede abrir. Si no la traes, solo queda rodear el muro.",
+      "opciones": [
+        { "texto": "Usar la llave", "siguiente": "final-llave", "si": { "tieneLlave": true } },
+        { "texto": "Rodear el portón", "siguiente": "final-muro" }
+      ]
+    },
+    "final-sendero": {
+      "imagen": "final-sendero",
+      "alt": "Imagen de prueba: el arco al final del sendero",
+      "texto": "Cruzaste el arco del jardín. Aquí se acaba este camino de prueba.",
+      "final": true
+    },
+    "final-llave": {
+      "imagen": "final-llave",
+      "alt": "Imagen de prueba: un portón abierto",
+      "texto": "La llave de cartón abrió el portón. Este desenlace solo aparece si te la llevaste.",
+      "final": true
+    },
+    "final-muro": {
+      "imagen": "final-muro",
+      "alt": "Imagen de prueba: un muro que cierra el camino",
+      "texto": "Rodeaste el portón y el camino termina contra un muro. Aquí acaba la prueba.",
+      "final": true
+    }
+  }
+}
